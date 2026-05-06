@@ -1,0 +1,1670 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F5E6C8" />
+    <meta
+      name="description"
+      content="Panchtarni Atta — premium, fresh and hygienic chakki atta. From our mill to your kitchen: no chemicals, no storage."
+    />
+    <title>Panchtarni Atta | Premium Fresh Chakki Atta</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --wheat: #f5e6c8;
+        --brown: #8b5e3c;
+        --green: #2f5d50;
+        --bg: #fbfaf7;
+        --text: #1b1b1b;
+        --muted: rgba(27, 27, 27, 0.68);
+        --card: rgba(255, 255, 255, 0.7);
+        --border: rgba(27, 27, 27, 0.12);
+        --shadow: 0 18px 50px rgba(17, 17, 17, 0.08);
+        --shadow-soft: 0 10px 30px rgba(17, 17, 17, 0.07);
+        --radius: 22px;
+        --radius-sm: 16px;
+        --container: 1120px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background: var(--bg);
+        font-family:
+          Inter,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Ubuntu,
+          Cantarell,
+          Noto Sans,
+          Arial,
+          sans-serif;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: geometricPrecision;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(var(--container), calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .skip {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+      }
+      .skip:focus {
+        left: 16px;
+        top: 16px;
+        z-index: 1000;
+        background: #fff;
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(14px);
+        background: rgba(251, 250, 247, 0.75);
+        border-bottom: 1px solid rgba(27, 27, 27, 0.08);
+      }
+
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+        gap: 16px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 220px;
+      }
+
+      .brand-mark {
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+        background: radial-gradient(circle at 30% 30%, #fff, var(--wheat));
+        border: 1px solid rgba(139, 94, 60, 0.22);
+        box-shadow: 0 10px 24px rgba(139, 94, 60, 0.12);
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+      }
+
+      .brand-name {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.12;
+      }
+
+      .brand-name strong {
+        font-family: "Playfair Display", ui-serif, Georgia, serif;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      .brand-name span {
+        color: var(--muted);
+        font-size: 12.5px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: rgba(27, 27, 27, 0.72);
+        font-size: 13px;
+        padding: 8px 10px;
+        border-radius: 12px;
+        transition: background 160ms ease;
+        white-space: nowrap;
+      }
+
+      .nav-links a:hover {
+        background: rgba(245, 230, 200, 0.65);
+        color: rgba(27, 27, 27, 0.88);
+      }
+
+      .nav-cta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        padding: 12px 16px;
+        font-weight: 600;
+        font-size: 13.5px;
+        letter-spacing: 0.01em;
+        cursor: pointer;
+        transition:
+          transform 140ms ease,
+          box-shadow 160ms ease,
+          background 160ms ease,
+          border-color 160ms ease;
+        user-select: none;
+        white-space: nowrap;
+      }
+
+      .btn:active {
+        transform: translateY(1px);
+      }
+
+      .btn-primary {
+        background: var(--green);
+        color: #fff;
+        box-shadow: 0 16px 36px rgba(47, 93, 80, 0.26);
+      }
+
+      .btn-primary:hover {
+        box-shadow: 0 18px 46px rgba(47, 93, 80, 0.34);
+      }
+
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.7);
+        border-color: rgba(27, 27, 27, 0.12);
+        color: rgba(27, 27, 27, 0.86);
+      }
+
+      .btn-secondary:hover {
+        background: rgba(245, 230, 200, 0.55);
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 56px 0 26px;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: -40px;
+        background:
+          radial-gradient(circle at 30% 15%, rgba(245, 230, 200, 0.85), transparent 55%),
+          radial-gradient(circle at 80% 35%, rgba(47, 93, 80, 0.16), transparent 58%),
+          radial-gradient(circle at 60% 70%, rgba(139, 94, 60, 0.12), transparent 62%),
+          linear-gradient(180deg, rgba(251, 250, 247, 0.2), rgba(251, 250, 247, 1));
+        filter: saturate(1.04);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%238B5E3C' stroke-opacity='0.08' stroke-width='1'%3E%3Cpath d='M35 185c30-40 30-110 0-150'/%3E%3Cpath d='M65 195c36-46 36-124 0-170'/%3E%3Cpath d='M95 205c42-52 42-138 0-190'/%3E%3Cpath d='M125 205c42-52 42-138 0-190'/%3E%3Cpath d='M155 195c36-46 36-124 0-170'/%3E%3Cpath d='M185 185c30-40 30-110 0-150'/%3E%3C/g%3E%3C/svg%3E");
+        background-size: 320px 320px;
+        opacity: 0.95;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        mask-image: radial-gradient(circle at 40% 25%, black, transparent 70%);
+      }
+
+      .hero-inner {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 34px;
+        align-items: center;
+        padding: 24px 0 14px;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(27, 27, 27, 0.12);
+        color: rgba(27, 27, 27, 0.74);
+        font-size: 12.5px;
+        width: fit-content;
+      }
+
+      .kicker-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--green);
+        box-shadow: 0 0 0 6px rgba(47, 93, 80, 0.14);
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display", ui-serif, Georgia, serif;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: clamp(34px, 3.6vw, 54px);
+        line-height: 1.07;
+        margin-top: 14px;
+      }
+
+      .lead {
+        color: rgba(27, 27, 27, 0.76);
+        font-size: 16.5px;
+        margin: 14px 0 20px;
+        max-width: 56ch;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .hero-meta {
+        display: grid;
+        gap: 12px;
+        padding: 20px;
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid rgba(27, 27, 27, 0.12);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .hero-meta-row {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 12px;
+        border-radius: 18px;
+        background: rgba(245, 230, 200, 0.55);
+        border: 1px solid rgba(139, 94, 60, 0.16);
+        color: rgba(27, 27, 27, 0.86);
+        font-size: 12.75px;
+        font-weight: 600;
+      }
+
+      .meta-small {
+        color: var(--muted);
+        font-size: 12.75px;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .section-head {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 22px;
+      }
+
+      .section-head h2 {
+        font-size: clamp(26px, 2.3vw, 34px);
+        line-height: 1.12;
+      }
+
+      .section-head p {
+        margin: 0;
+        color: var(--muted);
+        max-width: 70ch;
+      }
+
+      .card {
+        border-radius: var(--radius);
+        background: var(--card);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      .story-copy {
+        padding: 28px;
+      }
+
+      .story-copy p {
+        margin: 12px 0 0;
+        color: rgba(27, 27, 27, 0.74);
+        font-size: 15.5px;
+      }
+
+      .story-aside {
+        padding: 28px;
+        display: grid;
+        gap: 14px;
+        background:
+          radial-gradient(circle at 10% 15%, rgba(47, 93, 80, 0.12), transparent 60%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(245, 230, 200, 0.38));
+      }
+
+      .aside-metric {
+        display: grid;
+        gap: 6px;
+        padding: 16px;
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(27, 27, 27, 0.1);
+        background: rgba(255, 255, 255, 0.64);
+      }
+
+      .aside-metric strong {
+        font-size: 14px;
+      }
+
+      .aside-metric span {
+        color: var(--muted);
+        font-size: 12.75px;
+      }
+
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .icon-card {
+        padding: 18px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 16px;
+        border: 1px solid rgba(27, 27, 27, 0.1);
+        background: rgba(245, 230, 200, 0.55);
+        display: grid;
+        place-items: center;
+        color: var(--brown);
+      }
+
+      .icon-card strong {
+        font-size: 14px;
+      }
+
+      .icon-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13.5px;
+      }
+
+      .product-card {
+        padding: 20px;
+        display: grid;
+        gap: 12px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .product-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 20% 20%, rgba(245, 230, 200, 0.65), transparent 55%);
+        opacity: 0.9;
+        pointer-events: none;
+      }
+
+      .product-card > * {
+        position: relative;
+      }
+
+      .tag {
+        width: fit-content;
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: rgba(47, 93, 80, 0.12);
+        color: rgba(47, 93, 80, 0.96);
+        border: 1px solid rgba(47, 93, 80, 0.18);
+        font-weight: 600;
+        font-size: 12px;
+      }
+
+      .product-card h3 {
+        font-size: 20px;
+        line-height: 1.18;
+      }
+
+      .product-card ul {
+        margin: 0;
+        padding: 0 0 0 18px;
+        color: rgba(27, 27, 27, 0.72);
+        font-size: 13.5px;
+        display: grid;
+        gap: 6px;
+      }
+
+      .product-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 6px;
+      }
+
+      .sub-wrap {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 14px;
+        align-items: stretch;
+      }
+
+      .sub-copy {
+        padding: 28px;
+      }
+
+      .sub-copy p {
+        margin: 10px 0 0;
+        color: rgba(27, 27, 27, 0.74);
+      }
+
+      .sub-cards {
+        display: grid;
+        gap: 14px;
+        padding: 18px;
+      }
+
+      .plan {
+        padding: 18px;
+        border-radius: var(--radius);
+        border: 1px solid rgba(27, 27, 27, 0.1);
+        background: rgba(255, 255, 255, 0.7);
+        display: grid;
+        gap: 10px;
+      }
+
+      .plan-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .badge {
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(139, 94, 60, 0.12);
+        border: 1px solid rgba(139, 94, 60, 0.18);
+        color: rgba(139, 94, 60, 0.92);
+        font-weight: 700;
+        font-size: 12px;
+      }
+
+      .plan ul {
+        margin: 0;
+        padding: 0 0 0 18px;
+        color: rgba(27, 27, 27, 0.72);
+        font-size: 13.5px;
+        display: grid;
+        gap: 6px;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .step {
+        padding: 18px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .step strong {
+        font-size: 14px;
+      }
+
+      .step p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13.5px;
+      }
+
+      .step-index {
+        width: 42px;
+        height: 42px;
+        border-radius: 16px;
+        border: 1px solid rgba(27, 27, 27, 0.1);
+        background: rgba(255, 255, 255, 0.72);
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        color: var(--green);
+      }
+
+      .testimonials {
+        overflow: hidden;
+      }
+
+      .track {
+        display: flex;
+        gap: 14px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 6px;
+      }
+
+      .track::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      .track::-webkit-scrollbar-thumb {
+        background: rgba(27, 27, 27, 0.18);
+        border-radius: 999px;
+      }
+
+      .t-card {
+        flex: 0 0 min(420px, 86vw);
+        padding: 20px;
+        scroll-snap-align: start;
+        display: grid;
+        gap: 10px;
+      }
+
+      .t-quote {
+        margin: 0;
+        color: rgba(27, 27, 27, 0.76);
+        font-size: 14.5px;
+      }
+
+      .t-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .t-name {
+        display: grid;
+        gap: 2px;
+      }
+
+      .t-name strong {
+        font-size: 13.5px;
+      }
+
+      .t-name span {
+        font-size: 12.5px;
+        color: var(--muted);
+      }
+
+      .stars {
+        display: inline-flex;
+        gap: 2px;
+        color: rgba(139, 94, 60, 0.9);
+      }
+
+      .order {
+        padding: 26px;
+      }
+
+      .order-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 18px;
+        align-items: start;
+      }
+
+      .form {
+        display: grid;
+        gap: 12px;
+      }
+
+      label {
+        display: grid;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        color: rgba(27, 27, 27, 0.78);
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 14px;
+        border: 1px solid rgba(27, 27, 27, 0.14);
+        background: rgba(255, 255, 255, 0.78);
+        font: inherit;
+        color: rgba(27, 27, 27, 0.88);
+        outline: none;
+        transition:
+          box-shadow 140ms ease,
+          border-color 140ms ease,
+          background 140ms ease;
+      }
+
+      textarea {
+        min-height: 96px;
+        resize: vertical;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: rgba(47, 93, 80, 0.38);
+        box-shadow: 0 0 0 6px rgba(47, 93, 80, 0.12);
+        background: rgba(255, 255, 255, 0.92);
+      }
+
+      .order-side {
+        padding: 18px;
+        border-radius: var(--radius);
+        background:
+          radial-gradient(circle at 10% 10%, rgba(245, 230, 200, 0.8), transparent 55%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(251, 250, 247, 1));
+        border: 1px solid rgba(27, 27, 27, 0.12);
+      }
+
+      .side-title {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      .side-list {
+        margin: 12px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+        color: rgba(27, 27, 27, 0.72);
+        font-size: 13.5px;
+      }
+
+      .side-list li {
+        display: flex;
+        gap: 10px;
+      }
+
+      .check {
+        width: 18px;
+        height: 18px;
+        border-radius: 6px;
+        background: rgba(47, 93, 80, 0.12);
+        border: 1px solid rgba(47, 93, 80, 0.22);
+        color: rgba(47, 93, 80, 0.95);
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        margin-top: 1px;
+      }
+
+      .fineprint {
+        margin: 12px 0 0;
+        color: rgba(27, 27, 27, 0.58);
+        font-size: 12.5px;
+      }
+
+      footer {
+        padding: 28px 0 44px;
+        border-top: 1px solid rgba(27, 27, 27, 0.08);
+        background: rgba(245, 230, 200, 0.18);
+      }
+
+      .footer-inner {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 18px;
+        align-items: start;
+      }
+
+      .footer-inner p {
+        margin: 10px 0 0;
+        color: rgba(27, 27, 27, 0.7);
+        font-size: 13px;
+      }
+
+      .footer-box {
+        padding: 18px;
+        border-radius: var(--radius);
+        border: 1px solid rgba(27, 27, 27, 0.12);
+        background: rgba(255, 255, 255, 0.65);
+        box-shadow: var(--shadow-soft);
+        display: grid;
+        gap: 10px;
+      }
+
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        color: rgba(27, 27, 27, 0.75);
+        font-size: 13px;
+      }
+
+      .footer-row strong {
+        color: rgba(27, 27, 27, 0.92);
+        font-weight: 700;
+      }
+
+      .wa-float {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 80;
+        width: 54px;
+        height: 54px;
+        border-radius: 18px;
+        background: #1db954;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        transition: transform 160ms ease;
+      }
+
+      .wa-float:hover {
+        transform: translateY(-2px);
+      }
+
+      .wa-float svg {
+        width: 26px;
+        height: 26px;
+        fill: #fff;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(14px);
+        transition:
+          opacity 520ms ease,
+          transform 520ms ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .btn,
+        .reveal,
+        .wa-float {
+          transition: none !important;
+        }
+      }
+
+      @media (max-width: 980px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+        }
+        .story {
+          grid-template-columns: 1fr;
+        }
+        .sub-wrap {
+          grid-template-columns: 1fr;
+        }
+        .grid-4 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+        .steps {
+          grid-template-columns: 1fr;
+        }
+        .order-grid {
+          grid-template-columns: 1fr;
+        }
+        .nav-links {
+          display: none;
+        }
+      }
+
+      @media (max-width: 520px) {
+        section {
+          padding: 48px 0;
+        }
+        .hero {
+          padding-top: 44px;
+        }
+        .hero-meta {
+          padding: 16px;
+        }
+        .story-copy,
+        .story-aside,
+        .sub-copy,
+        .order {
+          padding: 20px;
+        }
+        .footer-inner {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#order">Skip to order</a>
+
+    <header class="nav" aria-label="Primary">
+      <div class="container nav-inner">
+        <a class="brand" href="#top" aria-label="Panchtarni Atta home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 3c3.8 2.2 6 5.3 6 9.2C18 18 12 21 12 21s-6-3-6-8.8C6 8.3 8.2 5.2 12 3Z"
+                stroke="rgba(47,93,80,0.92)"
+                stroke-width="1.6"
+              />
+              <path
+                d="M12 6.2c1.9 1.3 3 3.1 3 5.6 0 3.4-3 5.9-3 5.9s-3-2.5-3-5.9c0-2.5 1.1-4.3 3-5.6Z"
+                stroke="rgba(139,94,60,0.92)"
+                stroke-width="1.6"
+              />
+            </svg>
+          </span>
+          <span class="brand-name">
+            <strong>Panchtarni Atta</strong>
+            <span>Natural • Fresh • Hygienic</span>
+          </span>
+        </a>
+
+        <nav class="nav-links" aria-label="Sections">
+          <a href="#story">Brand story</a>
+          <a href="#why">Why us</a>
+          <a href="#products">Products</a>
+          <a href="#subscription">Subscription</a>
+          <a href="#reviews">Reviews</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn btn-secondary" href="#products">View Products</a>
+          <a
+            class="btn btn-primary"
+            id="navWhatsApp"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Order on WhatsApp
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Hero">
+        <div class="container hero-inner">
+          <div class="reveal">
+            <div class="kicker">
+              <span class="kicker-dot" aria-hidden="true"></span>
+              Premium chakki atta for everyday wellness
+            </div>
+            <h1>Pure Chakki Atta, Freshly Ground for Your Home</h1>
+            <p class="lead">
+              From our mill to your kitchen — no chemicals, no storage. Just clean, aromatic
+              atta that feels lighter, tastes better, and earns your trust.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary"
+                id="heroWhatsApp"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Order on WhatsApp
+                <span aria-hidden="true">→</span>
+              </a>
+              <a class="btn btn-secondary" href="#products">View Products</a>
+            </div>
+          </div>
+
+          <aside class="hero-meta reveal" aria-label="Highlights">
+            <div class="pill">
+              <span aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 3c3.8 2.2 6 5.3 6 9.2C18 18 12 21 12 21s-6-3-6-8.8C6 8.3 8.2 5.2 12 3Z"
+                    stroke="rgba(47,93,80,0.92)"
+                    stroke-width="1.8"
+                  />
+                </svg>
+              </span>
+              Freshly ground, premium wheat
+            </div>
+            <div class="hero-meta-row">
+              <div class="meta-small">
+                Calm, consistent quality — suited for rotis, parathas, and everyday meals.
+              </div>
+            </div>
+            <div class="hero-meta-row">
+              <div class="pill" style="background: rgba(255, 255, 255, 0.72)">
+                <span aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 3l8 4v6c0 5-3.1 8.5-8 10-4.9-1.5-8-5-8-10V7l8-4Z"
+                      stroke="rgba(47,93,80,0.92)"
+                      stroke-width="1.8"
+                    />
+                  </svg>
+                </span>
+                Hygienic processing & sealed packs
+              </div>
+            </div>
+            <div class="meta-small">
+              Serving select local areas with careful handling and timely delivery.
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="story" aria-label="Brand Story">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Fresh food creates healthy homes</h2>
+            <p>
+              At Panchtarni, we believe atta should feel fresh — not like it has sat for weeks.
+              We grind in small batches and keep the process clean, so every pack reaches you
+              with natural aroma, softness, and trust.
+            </p>
+          </div>
+
+          <div class="story">
+            <div class="card story-copy reveal">
+              <h3 style="font-size: 22px">A local mill, a premium promise</h3>
+              <p>
+                Our approach is simple: choose quality wheat, grind with care, and pack with
+                hygiene. No shortcuts, no loud claims — just consistent freshness you can taste.
+              </p>
+              <p>
+                Panchtarni Atta is made for families who care about purity, daily nutrition, and
+                the comfort of a good roti that stays soft.
+              </p>
+            </div>
+
+            <div class="card story-aside reveal" aria-label="Quality markers">
+              <div class="aside-metric">
+                <strong>Small-batch grinding</strong>
+                <span>For aroma, softness and better feel in dough</span>
+              </div>
+              <div class="aside-metric">
+                <strong>Clean, sealed packaging</strong>
+                <span>So freshness stays protected till your kitchen</span>
+              </div>
+              <div class="aside-metric">
+                <strong>Made for everyday rotis</strong>
+                <span>Balanced texture for consistent results</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" aria-label="Trust">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Why families choose Panchtarni</h2>
+            <p>Minimal, honest reasons — built for purity, freshness, and daily trust.</p>
+          </div>
+
+          <div class="grid-4">
+            <div class="card icon-card reveal">
+              <div class="icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 3v4m0 0c4.4 0 8 2.7 8 6s-3.6 6-8 6-8-2.7-8-6 3.6-6 8-6Z"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <strong>Freshly Ground Daily</strong>
+              <p>Small batches for a fresher aroma and better dough feel.</p>
+            </div>
+
+            <div class="card icon-card reveal">
+              <div class="icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 12h10M9 8h6M9 16h6"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M6.5 4h11A2.5 2.5 0 0 1 20 6.5v11A2.5 2.5 0 0 1 17.5 20h-11A2.5 2.5 0 0 1 4 17.5v-11A2.5 2.5 0 0 1 6.5 4Z"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  />
+                </svg>
+              </div>
+              <strong>No Preservatives</strong>
+              <p>Pure chakki atta — clean, simple, and family-friendly.</p>
+            </div>
+
+            <div class="card icon-card reveal">
+              <div class="icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 3l8 4v6c0 5-3.1 8.5-8 10-4.9-1.5-8-5-8-10V7l8-4Z"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M9 12.2l2.1 2.1L15.6 9.8"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <strong>Hygienic Processing</strong>
+              <p>Carefully handled and packed to protect freshness.</p>
+            </div>
+
+            <div class="card icon-card reveal">
+              <div class="icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M3 7h13l5 5v5a2 2 0 0 1-2 2H3V7Z"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M16 7v5h5"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M7 17h6"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <strong>Local Delivery</strong>
+              <p>Quick turnaround with careful handling in your area.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" aria-label="Products">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Products</h2>
+            <p>
+              Clean, premium packs for households of every size. Choose your pack — and if you
+              want a blend, ask for a custom mix.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <div class="card product-card reveal" aria-label="5kg pack">
+              <div class="tag">Everyday Fresh</div>
+              <h3>5kg Pack</h3>
+              <ul>
+                <li>Ideal for smaller households</li>
+                <li>Sealed for freshness</li>
+                <li>Consistent softness for rotis</li>
+              </ul>
+              <div class="product-actions">
+                <a class="btn btn-primary" href="#order" data-pack="5kg Pack">Order</a>
+                <a class="btn btn-secondary" href="#subscription">Subscribe</a>
+              </div>
+            </div>
+
+            <div class="card product-card reveal" aria-label="10kg pack">
+              <div class="tag">Most Popular</div>
+              <h3>10kg Pack</h3>
+              <ul>
+                <li>Great value for families</li>
+                <li>Balanced texture for daily cooking</li>
+                <li>Fresh milling in small batches</li>
+              </ul>
+              <div class="product-actions">
+                <a class="btn btn-primary" href="#order" data-pack="10kg Pack">Order</a>
+                <a class="btn btn-secondary" href="#subscription">Subscribe</a>
+              </div>
+            </div>
+
+            <div class="card product-card reveal" aria-label="20kg family pack">
+              <div class="tag">Family Stock</div>
+              <h3>20kg Family Pack</h3>
+              <ul>
+                <li>For larger households</li>
+                <li>Reliable quality, consistent results</li>
+                <li>Local delivery support</li>
+              </ul>
+              <div class="product-actions">
+                <a class="btn btn-primary" href="#order" data-pack="20kg Family Pack">Order</a>
+                <a class="btn btn-secondary" href="#subscription">Subscribe</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal" style="margin-top: 14px; padding: 22px">
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+              <div class="pill" style="background: rgba(47, 93, 80, 0.12)">
+                Custom Atta Mix Available
+              </div>
+              <div style="color: rgba(27, 27, 27, 0.74); font-size: 13.5px">
+                Wheat + Bajra + Ragi (as per your taste). Ask on WhatsApp for mixing ratio.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="subscription" aria-label="Subscription">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Never Run Out of Atta</h2>
+            <p>
+              Set a weekly or monthly plan. Fresh pack delivered on schedule — with priority
+              service and better value.
+            </p>
+          </div>
+
+          <div class="sub-wrap">
+            <div class="card sub-copy reveal">
+              <h3 style="font-size: 22px">Simple plans, calmer kitchens</h3>
+              <p>
+                Your household rhythm stays smooth when staples arrive on time. Choose your
+                pack, pick a frequency, and we’ll coordinate delivery on WhatsApp.
+              </p>
+              <div class="hero-actions" style="margin-top: 16px">
+                <a class="btn btn-primary" href="#order" data-sub="Monthly">
+                  Start Subscription
+                  <span aria-hidden="true">→</span>
+                </a>
+                <a class="btn btn-secondary" href="#how">How it works</a>
+              </div>
+            </div>
+
+            <div class="card sub-cards reveal" aria-label="Plans">
+              <div class="plan">
+                <div class="plan-top">
+                  <strong>Weekly Delivery</strong>
+                  <span class="badge">Save 5%</span>
+                </div>
+                <ul>
+                  <li>Ideal for regular consumption</li>
+                  <li>Fixed day delivery coordination</li>
+                  <li>Priority slot in your area</li>
+                </ul>
+              </div>
+
+              <div class="plan">
+                <div class="plan-top">
+                  <strong>Monthly Delivery</strong>
+                  <span class="badge">Save 8%</span>
+                </div>
+                <ul>
+                  <li>Best value for families</li>
+                  <li>Convenient refill schedule</li>
+                  <li>Easy changes via WhatsApp</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" aria-label="How it works">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>How it works</h2>
+            <p>A smooth, 3-step flow — designed to keep ordering effortless.</p>
+          </div>
+
+          <div class="steps">
+            <div class="card step reveal">
+              <div class="step-index" aria-hidden="true">1</div>
+              <strong>Choose your pack</strong>
+              <p>Select 5kg, 10kg, or 20kg — and mention if you want a custom mix.</p>
+            </div>
+            <div class="card step reveal">
+              <div class="step-index" aria-hidden="true">2</div>
+              <strong>Enter your details</strong>
+              <p>Add name and delivery address so we can confirm availability and timing.</p>
+            </div>
+            <div class="card step reveal">
+              <div class="step-index" aria-hidden="true">3</div>
+              <strong>Get fresh atta delivered</strong>
+              <p>We confirm on WhatsApp and deliver fresh, hygienic sealed packs locally.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" class="testimonials" aria-label="Testimonials">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>What customers say</h2>
+            <p>Real, calm feedback from families who prefer freshness and consistency.</p>
+          </div>
+
+          <div class="track reveal" id="testimonialTrack" aria-label="Auto sliding testimonials">
+            <article class="card t-card">
+              <p class="t-quote">
+                “Rotis stay soft even after a few hours. The atta feels fresh and the aroma is
+                noticeably better than regular packs.”
+              </p>
+              <div class="t-meta">
+                <div class="t-name">
+                  <strong>Neha Kulkarni</strong>
+                  <span>10kg pack • Monthly</span>
+                </div>
+                <div class="stars" aria-label="5 stars">★★★★★</div>
+              </div>
+            </article>
+
+            <article class="card t-card">
+              <p class="t-quote">
+                “Packaging is clean and delivery is on time. Dough consistency is good — we’ve
+                switched fully to Panchtarni.”
+              </p>
+              <div class="t-meta">
+                <div class="t-name">
+                  <strong>Amit Sharma</strong>
+                  <span>20kg pack • Family</span>
+                </div>
+                <div class="stars" aria-label="5 stars">★★★★★</div>
+              </div>
+            </article>
+
+            <article class="card t-card">
+              <p class="t-quote">
+                “I wanted a wheat + ragi mix, and they guided the ratio properly. Taste is
+                balanced and it feels lighter.”
+              </p>
+              <div class="t-meta">
+                <div class="t-name">
+                  <strong>Ritu Desai</strong>
+                  <span>Custom mix • Weekly</span>
+                </div>
+                <div class="stars" aria-label="5 stars">★★★★★</div>
+              </div>
+            </article>
+
+            <article class="card t-card">
+              <p class="t-quote">
+                “Premium feel without being flashy. Freshness is consistent, and the flour looks
+                clean. Good local brand.”
+              </p>
+              <div class="t-meta">
+                <div class="t-name">
+                  <strong>Sameer Khan</strong>
+                  <span>5kg pack • Regular</span>
+                </div>
+                <div class="stars" aria-label="5 stars">★★★★★</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="order" aria-label="Order">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Order on WhatsApp</h2>
+            <p>
+              Share your details once — WhatsApp opens with a ready message. We’ll confirm
+              availability and delivery time.
+            </p>
+          </div>
+
+          <div class="card order reveal">
+            <div class="order-grid">
+              <form class="form" id="orderForm" autocomplete="on">
+                <label>
+                  Name
+                  <input id="name" name="name" type="text" placeholder="Your full name" required />
+                </label>
+
+                <label>
+                  Address
+                  <textarea
+                    id="address"
+                    name="address"
+                    placeholder="House / Flat, Area, Landmark, City"
+                    required
+                  ></textarea>
+                </label>
+
+                <label>
+                  Pack
+                  <select id="pack" name="pack" required>
+                    <option value="" selected disabled>Select pack</option>
+                    <option value="5kg Pack">5kg Pack</option>
+                    <option value="10kg Pack">10kg Pack</option>
+                    <option value="20kg Family Pack">20kg Family Pack</option>
+                    <option value="Custom Atta Mix (Wheat + Bajra + Ragi)">
+                      Custom Atta Mix (Wheat + Bajra + Ragi)
+                    </option>
+                  </select>
+                </label>
+
+                <label>
+                  Quantity
+                  <select id="qty" name="qty" required>
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </label>
+
+                <label>
+                  Delivery preference (optional)
+                  <select id="frequency" name="frequency">
+                    <option value="" selected>One-time order</option>
+                    <option value="Weekly subscription">Weekly subscription</option>
+                    <option value="Monthly subscription">Monthly subscription</option>
+                  </select>
+                </label>
+
+                <button class="btn btn-primary" id="orderWhatsApp" type="submit">
+                  Order on WhatsApp
+                  <span aria-hidden="true">→</span>
+                </button>
+
+                <div class="fineprint" id="waNote">
+                  WhatsApp number: <strong id="waDisplay">+91 98765 43210</strong> (edit in the
+                  HTML if needed)
+                </div>
+              </form>
+
+              <aside class="order-side" aria-label="Order notes">
+                <h3 class="side-title">What happens next</h3>
+                <ul class="side-list">
+                  <li>
+                    <span class="check" aria-hidden="true">✓</span>
+                    <span>We confirm your area & delivery slot on WhatsApp.</span>
+                  </li>
+                  <li>
+                    <span class="check" aria-hidden="true">✓</span>
+                    <span>Fresh pack prepared and sealed with hygiene.</span>
+                  </li>
+                  <li>
+                    <span class="check" aria-hidden="true">✓</span>
+                    <span>Local delivery with careful handling.</span>
+                  </li>
+                </ul>
+                <p class="fineprint">
+                  Serving areas: <strong>Update this line</strong> with your localities (e.g.
+                  nearby sectors/colonies).
+                </p>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer aria-label="Footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 3c3.8 2.2 6 5.3 6 9.2C18 18 12 21 12 21s-6-3-6-8.8C6 8.3 8.2 5.2 12 3Z"
+                  stroke="rgba(47,93,80,0.92)"
+                  stroke-width="1.6"
+                />
+                <path
+                  d="M12 6.2c1.9 1.3 3 3.1 3 5.6 0 3.4-3 5.9-3 5.9s-3-2.5-3-5.9c0-2.5 1.1-4.3 3-5.6Z"
+                  stroke="rgba(139,94,60,0.92)"
+                  stroke-width="1.6"
+                />
+              </svg>
+            </span>
+            <span class="brand-name">
+              <strong>Panchtarni Atta</strong>
+              <span>Premium chakki atta</span>
+            </span>
+          </div>
+          <p>
+            Natural, fresh, and hygienic chakki atta. A premium local brand focused on purity,
+            freshness, and trust.
+          </p>
+        </div>
+
+        <div class="footer-box">
+          <div class="footer-row">
+            <span>Phone / WhatsApp</span>
+            <strong id="footerPhone">+91 98765 43210</strong>
+          </div>
+          <div class="footer-row">
+            <span>Service areas</span>
+            <strong>Update areas</strong>
+          </div>
+          <div class="footer-row">
+            <span>Hours</span>
+            <strong>9am – 8pm</strong>
+          </div>
+          <div class="footer-row">
+            <span>©</span>
+            <strong id="year"></strong>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a class="wa-float" id="waFloat" href="#" aria-label="Order on WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M20.52 3.48A11.7 11.7 0 0 0 12.03 0C5.48.02.17 5.33.2 11.88c.01 2.1.56 4.15 1.6 5.96L0 24l6.34-1.67a11.82 11.82 0 0 0 5.68 1.45h.01c6.55 0 11.86-5.31 11.88-11.86a11.8 11.8 0 0 0-3.39-8.44Zm-8.49 18.32h-.01a9.83 9.83 0 0 1-5.01-1.37l-.36-.22-3.76.99 1-3.67-.23-.38a9.82 9.82 0  1 1 18.2-5.27c-.02 5.43-4.44 9.92-9.83 9.92Zm5.39-7.37c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.23-.64.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.66-1.6-.9-2.19-.24-.58-.48-.5-.66-.51h-.56c-.2 0-.52.08-.8.38-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.08 2.9 1.23 3.1.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.56-.35Z"
+        />
+      </svg>
+    </a>
+
+    <script>
+      (function () {
+        var CONFIG = {
+          whatsappNumber: "919876543210",
+          brandName: "Panchtarni Atta",
+        };
+
+        function normalizeNumber(number) {
+          return String(number || "")
+            .replace(/[^\d]/g, "")
+            .replace(/^0+/, "");
+        }
+
+        function buildWhatsAppUrl(number, message) {
+          var clean = normalizeNumber(number);
+          var text = encodeURIComponent(message || "");
+          return "https://wa.me/" + clean + "?text=" + text;
+        }
+
+        function safeValue(el) {
+          return (el && el.value ? String(el.value) : "").trim();
+        }
+
+        function setText(id, value) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = value;
+        }
+
+        function setHref(id, href) {
+          var el = document.getElementById(id);
+          if (el) el.setAttribute("href", href);
+        }
+
+        setText("year", String(new Date().getFullYear()));
+
+        var displayNumber = "+91 98765 43210";
+        setText("waDisplay", displayNumber);
+        setText("footerPhone", displayNumber);
+
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) entry.target.classList.add("is-visible");
+            });
+          },
+          { threshold: 0.14 }
+        );
+
+        document.querySelectorAll(".reveal").forEach(function (el) {
+          observer.observe(el);
+        });
+
+        var track = document.getElementById("testimonialTrack");
+        var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (track && !prefersReducedMotion) {
+          var autoTimer = null;
+          var lastInteraction = 0;
+
+          function nextCard() {
+            var now = Date.now();
+            if (now - lastInteraction < 3500) return;
+            var card = track.querySelector(".t-card");
+            if (!card) return;
+            var step = card.getBoundingClientRect().width + 14;
+            var max = track.scrollWidth - track.clientWidth - 2;
+            var next = Math.min(track.scrollLeft + step, max);
+            if (next >= max) next = 0;
+            track.scrollTo({ left: next, behavior: "smooth" });
+          }
+
+          ["pointerdown", "wheel", "touchstart", "keydown"].forEach(function (evt) {
+            track.addEventListener(evt, function () {
+              lastInteraction = Date.now();
+            });
+          });
+
+          autoTimer = window.setInterval(nextCard, 3200);
+          window.addEventListener("beforeunload", function () {
+            if (autoTimer) window.clearInterval(autoTimer);
+          });
+        }
+
+        var orderForm = document.getElementById("orderForm");
+        var packEl = document.getElementById("pack");
+        var qtyEl = document.getElementById("qty");
+        var frequencyEl = document.getElementById("frequency");
+
+        function buildOrderMessage() {
+          var name = safeValue(document.getElementById("name"));
+          var address = safeValue(document.getElementById("address"));
+          var pack = safeValue(packEl);
+          var qty = safeValue(qtyEl);
+          var frequency = safeValue(frequencyEl);
+
+          var lines = [
+            "Hello " + CONFIG.brandName + ",",
+            "I would like to place an order.",
+            "",
+            "Name: " + name,
+            "Address: " + address,
+            "Pack: " + pack,
+            "Quantity: " + qty,
+          ];
+
+          if (frequency) lines.push("Plan: " + frequency);
+
+          lines.push("", "Please confirm availability and delivery time. Thank you!");
+          return lines.join("\n");
+        }
+
+        function openWhatsApp(message) {
+          var url = buildWhatsAppUrl(CONFIG.whatsappNumber, message);
+          window.open(url, "_blank", "noopener,noreferrer");
+        }
+
+        document.querySelectorAll("[data-pack]").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var pack = btn.getAttribute("data-pack");
+            if (packEl) packEl.value = pack;
+          });
+        });
+
+        document.querySelectorAll("[data-sub]").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var plan = btn.getAttribute("data-sub");
+            if (frequencyEl) frequencyEl.value = plan ? plan + " subscription" : "";
+          });
+        });
+
+        if (orderForm) {
+          orderForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (!orderForm.reportValidity()) return;
+            openWhatsApp(buildOrderMessage());
+          });
+        }
+
+        var defaultMessage = "Hello " + CONFIG.brandName + ", I want to order fresh chakki atta.";
+        var defaultUrl = buildWhatsAppUrl(CONFIG.whatsappNumber, defaultMessage);
+
+        setHref("waFloat", defaultUrl);
+        setHref("navWhatsApp", defaultUrl);
+        setHref("heroWhatsApp", defaultUrl);
+      })();
+    </script>
+  </body>
+</html>
