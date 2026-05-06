@@ -932,13 +932,7 @@
 
         <div class="nav-cta">
           <a class="btn btn-secondary" href="#products">View Products</a>
-          <a
-            class="btn btn-primary"
-            id="navWhatsApp"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="btn btn-primary" id="navWhatsApp" href="#order">
             Order on WhatsApp
             <span aria-hidden="true">→</span>
           </a>
@@ -960,13 +954,7 @@
               atta that feels lighter, tastes better, and earns your trust.
             </p>
             <div class="hero-actions">
-              <a
-                class="btn btn-primary"
-                id="heroWhatsApp"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a class="btn btn-primary" id="heroWhatsApp" href="#order">
                 Order on WhatsApp
                 <span aria-hidden="true">→</span>
               </a>
@@ -1662,8 +1650,6 @@
         var defaultUrl = buildWhatsAppUrl(CONFIG.whatsappNumber, defaultMessage);
 
         setHref("waFloat", defaultUrl);
-        setHref("navWhatsApp", defaultUrl);
-        setHref("heroWhatsApp", defaultUrl);
       })();
     </script>
   </body>
